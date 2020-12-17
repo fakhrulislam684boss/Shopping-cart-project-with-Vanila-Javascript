@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700");f
+
+:root {
+  --primaryColor: #f09d51;
+  --mainWhite: #fff;
+  --mainBlack: #222;
+  --mainGrey: #ececec;
+  --mainSpacing: 0.1rem;
+  --mainTransition: all 0.3s linear;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  color: var(--mainBlack);
+  background: var(--mainWhite);
+  font-family: "Lato", sans-serif;
+}
+.navbar {
+  position: sticky;
+  top: 0;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: rgb(231, 226, 221);
+  z-index: 1;
+}
+.navbar-center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1000px;
+}
+.nav-icon {
+  font-size: 1.5rem;
+}
+.fa-bars{
+    cursor: pointer;
+}
+.cart-btn {
+  position: relative;
+  cursor: pointer;
+}
+.cart-items {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #f09d51;
+  padding: 0 5px;
+  border-radius: 30%;
+  color: white;
+}
+
+/* start hero */
+.hero {
+  min-height: calc(100vh - 60px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("./image/background.jpg") center/cover no-repeat;
+}
+.banner {
+  text-align: center;
+  display: inline-block;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.5);
+}
+.banner-title {
+  text-transform: uppercase;
+  font-size: 3.4rem;
+  letter-spacing: 0.1rem;
+  margin-bottom: 3rem;
+}
+.banner-btn {
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: v#333;
+  background-color:#f09d51 ;
+  border: 1px solid #f09d51;
+  cursor: pointer;
+}
+
+.banner-btn:hover {
+  background: transparent;
+  background-color: white;
+  color: #f09d51;
+  border: none;
+}
+
+/* end hero */
+
+.product{
+  margin-bottom: 2rem;
+}
+.container {
+  padding: 4rem 0;
+}
+.product-title h2 {
+  text-align: center;
+  text-transform: uppercase;
+  initial-letter: 0.1rem;
+  margin-bottom: 5rem;
+  font-size: 2.5rem;
+}
+
+.img-container {
+  position: relative;
+  overflow: hidden;
+}
+.bag-btn {
+  position: absolute;
+  top: 60%;
+  right: 0px;
+  background: #f09d51;
+  border: none;
+  text-transform: uppercase;
+  padding: 0.5rem 0.75rem;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+  transition: all 0.3s linear;
+  transform: translateX(110%);
+  cursor: pointer;
+  
+}
+.bag-btn:hover {
+  color: white;
+}
+.fa-shopping-cart {
+  margin-right: 0.8rem;
+}
+.img-container:hover .bag-btn {
+  transform: translateX(0%);
+}
+
+.img-container:hover .card-img-top {
+  opacity: 0.8;
+}
+
+.product h3 {
+  text-transform: capitalize;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  letter-spacing: 0.1rem ;
+  text-align: center;
+}
+
+.product h4 {
+  margin-top: 0.7rem;
+  letter-spacing: 0.1rem;
+  color:#f09d51;
+  text-align: center;
+}
+
+.col-md-3{
+  padding: 30px !important;
+}
+
+/* --------------- Cart ---------------- */
+.cart-overlay{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background: rgb(240, 157, 81, 0.5);
+  transition: all 0.3s linear;
+  z-index: 2;
+  visibility: hidden;
+
+}
+.cart{
+  position: fixed;
+  top: 0;
+  right: 0;
+  overflow: scroll;
+  z-index: 3;
+  background-color: rgba(231,266,221);
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+  transition:all 0.3s linear;
+  transform: translateX(100%);
+
+}
+.showCart{
+   transform: translateX(0);
+}
+.transparentBcg{
+  visibility: visible;
+}
+
+@media screen and (min-width:768px){
+  .cart{
+    width: 30%;
+    /* width: 30vw;
+    min-width: 450px; */
+  }
+}
+
+.close-cart{
+  font-size: 1.7rem;
+  cursor: pointer;
+
+}
+.cart h2{
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  letter-spacing: 0.1rem;
+}
+
+.cart-img{
+  height: 75px;
+  width: 75px;
+}
+.cart-footer{
+  margin-top: 2rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+.remove-item{
+  color: gray;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+.content-text{
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  letter-spacing: 0.1rem;
+  margin-bottom: .5rem;
+
+}
+.content-text{
+ font-size: 1.2rem;
+}
+.cart-total{
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+}
+.fa-chevron-up,
+.fa-chevron-down{
+  color: red;
+  cursor: pointer;
+}
